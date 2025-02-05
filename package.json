@@ -1,0 +1,23 @@
+{
+  "name": "webdevtest",
+  "version": "1.0.0",
+  "description": "testing for web development pathway",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tlpatr3/VSCode.git"
+  },
+  "keywords": [
+    "codeyou",
+    "test"
+  ],
+  "author": "Tiffany Patrick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tlpatr3/VSCode/issues"
+  },
+  "homepage": "https://github.com/tlpatr3/VSCode#readme"
+}
