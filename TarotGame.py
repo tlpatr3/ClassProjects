@@ -25,17 +25,12 @@ tarot_cards = {
     21: ("The World", "Completion, fulfillment, wholeness, travel."),
 }
 
-def pick_tarot_card():
-    try:
-        number = int(input("Pick a number between 0 and 21: "))
-        if number not in tarot_cards:
-            return "Invalid number. Please choose a number between 0 and 21."
-        card_name, meaning = tarot_cards[number]
-        return f"You picked {card_name} ({number}): {meaning}"
-    except ValueError:
-        return "Invalid input. Please enter a number between 0 and 21."
 
 def draw_tarot_card():
     number = random.randint(0, 21)
     card_name, meaning = tarot_cards[number]
     return f"Your card is {card_name} ({number}): {meaning}"
+
+
+if __name__ == "__main__":
+    print(draw_tarot_card())
