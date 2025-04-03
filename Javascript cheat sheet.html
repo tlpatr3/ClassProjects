@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <script src="practice.js"></script>
+    
+    <title>JavaScript Cheat Sheets</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            color: #333;
+        }
+
+        h1, h2 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 40px;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            overflow-x: auto;
+            border-left: 4px solid #3498db;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #e8e8e8;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Basics Cheat Sheet</h1>
+
+    <h2>Variables</h2>
+    <pre><code>let name = "Alice";
+const pi = 3.14;
+var age = 30;</code></pre>
+
+    <h2>Data Types</h2>
+    <ul>
+        <li><code>string</code>: "Hello"</li>
+        <li><code>number</code>: 42, 3.14</li>
+        <li><code>boolean</code>: true, false</li>
+        <li><code>null</code>: intentionally empty</li>
+        <li><code>undefined</code>: declared but not assigned</li>
+        <li><code>symbol</code>: unique identifier</li>
+        <li><code>bigint</code>: large integers</li>
+    </ul>
+
+    <h2>Conditionals</h2>
+    <pre><code>if (x > 10) {
+    // do something
+} else if (x === 10) {
+    // something else
+} else {
+    // fallback
+}</code></pre>
+
+    <h2>Loops</h2>
+    <pre><code>for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+
+while (condition) {
+    // loop
+}
+
+do {
+    // run once
+} while (condition);</code></pre>
+
+    <h2>Functions</h2>
+    <pre><code>function greet(name) {
+    return "Hello " + name;
+}
+
+const add = (a, b) => a + b;</code></pre>
+
+    <h2>Arrays</h2>
+    <pre><code>let fruits = ["apple", "banana"];
+fruits.push("orange");
+fruits.pop();
+fruits.shift();
+fruits.unshift("kiwi");
+fruits.length;
+fruits[0];</code></pre>
+
+    <h2>Array Methods</h2>
+    <pre><code>arr.forEach(item => console.log(item));
+arr.map(item => item * 2);
+arr.filter(item => item > 5);
+arr.find(item => item === 10);
+arr.reduce((sum, num) => sum + num, 0);</code></pre>
+
+    <h2>Objects</h2>
+    <pre><code>let user = { name: "Bob", age: 30 };
+user.name;
+user.job = "Engineer";
+delete user.age;</code></pre>
+
+    <h2>JSON</h2>
+    <pre><code>let json = JSON.stringify(user);
+let obj = JSON.parse(json);</code></pre>
+
+    <h2>DOM & Events</h2>
+    <pre><code>document.getElementById("title").innerText = "Hello";
+document.querySelector(".box").style.color = "blue";
+
+document.getElementById("btn").addEventListener("click", function() {
+    alert("Button clicked!");
+});</code></pre>
+
+    <h2>Debugging</h2>
+    <pre><code>console.log("Debug info");
+console.error("Error message");
+debugger;</code></pre>
+
+    <hr>
+
+    <h1>JavaScript Operators Cheat Sheet</h1>
+
+    <h2>Arithmetic Operators</h2>
+    <table>
+        <tr><th>Operator</th><th>Description</th><th>Example</th><th>Result</th></tr>
+        <tr><td>+</td><td>Addition</td><td>5 + 3</td><td>8</td></tr>
+        <tr><td>-</td><td>Subtraction</td><td>5 - 3</td><td>2</td></tr>
+        <tr><td>*</td><td>Multiplication</td><td>5 * 3</td><td>15</td></tr>
+        <tr><td>/</td><td>Division</td><td>6 / 3</td><td>2</td></tr>
+        <tr><td>%</td><td>Modulus</td><td>5 % 2</td><td>1</td></tr>
+        <tr><td>**</td><td>Exponentiation</td><td>2 ** 3</td><td>8</td></tr>
+        <tr><td>++</td><td>Increment</td><td>x++</td><td>x = 2</td></tr>
+        <tr><td>--</td><td>Decrement</td><td>x--</td><td>x = 1</td></tr>
+    </table>
+
+    <h2>Assignment Operators</h2>
+    <table>
+        <tr><th>Operator</th><th>Description</th><th>Example</th><th>Equivalent To</th></tr>
+        <tr><td>=</td><td>Assign</td><td>x = 5</td><td>x = 5</td></tr>
+        <tr><td>+=</td><td>Add and assign</td><td>x += 2</td><td>x = x + 2</td></tr>
+        <tr><td>-=</td><td>Subtract and assign</td><td>x -= 1</td><td>x = x - 1</td></tr>
+        <tr><td>*=</td><td>Multiply and assign</td><td>x *= 3</td><td>x = x * 3</td></tr>
+        <tr><td>/=</td><td>Divide and assign</td><td>x /= 2</td><td>x = x / 2</td></tr>
+        <tr><td>%=</td><td>Modulus and assign</td><td>x %= 2</td><td>x = x % 2</td></tr>
+        <tr><td>**=</td><td>Exponent and assign</td><td>x **= 2</td><td>x = x ** 2</td></tr>
+    </table>
+
+    <h2>Comparison Operators</h2>
+    <table>
+        <tr><th>Operator</th><th>Description</th><th>Example</th><th>Result</th></tr>
+        <tr><td>==</td><td>Loose equality</td><td>5 == '5'</td><td>true</td></tr>
+        <tr><td>===</td><td>Strict equality</td><td>5 === '5'</td><td>false</td></tr>
+        <tr><td>!=</td><td>Not equal</td><td>5 != 3</td><td>true</td></tr>
+        <tr><td>!==</td><td>Strict not equal</td><td>5 !== '5'</td><td>true</td></tr>
+        <tr><td>&gt;</td><td>Greater than</td><td>5 &gt; 3</td><td>true</td></tr>
+        <tr><td>&lt;</td><td>Less than</td><td>5 &lt; 3</td><td>false</td></tr>
+        <tr><td>&gt;=</td><td>Greater or equal</td><td>5 &gt;= 5</td><td>true</td></tr>
+        <tr><td>&lt;=</td><td>Less or equal</td><td>5 &lt;= 4</td><td>false</td></tr>
+    </table>
+
+    <h2>Logical Operators</h2>
+    <pre><code>true && false   // false
+true || false   // true
+!true           // false</code></pre>
+
+    <h2>String Operators</h2>
+    <pre><code>"Hi" + " there"   // "Hi there"
+str += "!"        // "Hello!"</code></pre>
+
+    <h2>Ternary Operator</h2>
+    <pre><code>let age = 18;
+let result = (age >= 18) ? "Adult" : "Minor";</code></pre>
+
+    <h2>Type Operators</h2>
+    <pre><code>typeof "hello"         // "string"
+x instanceof Array     // true</code></pre>
+
+</body>
+</html>
